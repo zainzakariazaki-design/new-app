@@ -1,9 +1,13 @@
+<?php
+// You can also write PHP logic here if needed
+$title = "Sample Webpage";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sample Webpage</title>
+    <title><?php echo $title; ?></title>
 
     <style>
         body {
@@ -42,7 +46,7 @@
 
 <body>
     <header>
-        <h1>My Sample Webpage</h1>
+        <h1><?php echo $title; ?></h1>
     </header>
 
     <nav>
@@ -53,11 +57,16 @@
 
     <main>
         <h2>Welcome!</h2>
-        <p>This is a simple webpage layout created using HTML and CSS.</p>
+        <p>This is a simple webpage layout created using HTML, CSS, and PHP.</p>
+
+        <?php
+        // Example of PHP output inside the page
+        echo "<p>Today's date is: " . date("l, F j, Y") . "</p>";
+        ?>
     </main>
 
     <footer>
-        &copy; 2025 My Website
+        &copy; <?php echo date("Y"); ?> My Website
     </footer>
 </body>
 </html>
