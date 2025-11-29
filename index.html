@@ -1,6 +1,5 @@
 <?php
-// You can also write PHP logic here if needed
-$title = "Sample Webpage";
+$title = "My Modern Website";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,36 +9,70 @@ $title = "Sample Webpage";
     <title><?php echo $title; ?></title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background: #f5f5f5;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #eef0f4;
+            color: #333;
+        }
+
         header {
-            background: #333;
+            background: linear-gradient(135deg, #4b79a1, #283e51);
             color: white;
-            padding: 20px;
+            padding: 50px 20px;
             text-align: center;
         }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
         nav {
-            background: #444;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            margin-right: 15px;
-            text-decoration: none;
-        }
-        main {
-            padding: 20px;
-        }
-        footer {
-            background: #333;
-            color: white;
+            background: #1f2937;
+            padding: 12px 20px;
             text-align: center;
-            padding: 10px;
-            margin-top: 30px;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #1f2937;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            background: #1f2937;
+            color: white;
+            font-size: 15px;
         }
     </style>
 </head>
@@ -47,26 +80,30 @@ $title = "Sample Webpage";
 <body>
     <header>
         <h1><?php echo $title; ?></h1>
+        <p>Your tagline goes here — modern, clean and simple.</p>
     </header>
 
     <nav>
         <a href="#">Home</a>
-        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
         <a href="#">Contact</a>
     </nav>
 
-    <main>
-        <h2>Welcome!</h2>
-        <p>This is a simple webpage layout created using HTML, CSS, and PHP.</p>
+    <div class="container">
+        <h2>Welcome to My Website</h2>
+        <p>
+            This is a clean, modern PHP webpage template. You can edit the content,
+            add PHP logic, connect a database, or expand it into a full site.
+        </p>
 
-        <?php
-        // Example of PHP output inside the page
-        echo "<p>Today's date is: " . date("l, F j, Y") . "</p>";
-        ?>
-    </main>
+        <p>
+            Everything is organized and ready for you to customize.
+        </p>
+    </div>
 
     <footer>
-        &copy; <?php echo date("Y"); ?> My Website
+        &copy; <?php echo date("Y"); ?> My Modern Website — All Rights Reserved
     </footer>
 </body>
 </html>
